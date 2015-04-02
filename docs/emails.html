@@ -16,18 +16,20 @@
           <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
           <a class="small" href="javascript:void(0);">+</a>
           <div id="jump_wrapper">
-          <div id="jump_page">
-            
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
               
-              <a class="source" href="emails.html">
-                emails.coffee
-              </a>
-            
+                
+                <a class="source" href="emails.html">
+                  emails.coffee
+                </a>
               
-              <a class="source" href="utils.html">
-                utils.coffee
-              </a>
-            
+                
+                <a class="source" href="utils.html">
+                  utils.coffee
+                </a>
+              
+            </div>
           </div>
         </li>
       </ul>
@@ -144,7 +146,7 @@ Utils = share.MailerUtils</pre></div></div>
                 <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
               <p><code>baseUrl</code> gives you a full absolute URL from a relative path.</p>
-<pre><code>{{ baseUrl <span class="hljs-string">'/some-path'</span> }}<span class="hljs-function"> =&gt;</span> <span class="hljs-attribute">http</span>:<span class="hljs-regexp">//</span>root-domain.com/some-path
+<pre><code>{{ baseUrl <span class="hljs-string">'/some-path'</span> }} =&gt; <span class="hljs-attribute">http</span>:<span class="hljs-regexp">//</span>root-domain.com/some-path
 </code></pre>
             </div>
             
@@ -162,7 +164,7 @@ Utils = share.MailerUtils</pre></div></div>
               </div>
               <p><code>emailUrlFor</code> takes an Iron Router route (with optional params) and
 creates an absolute URL.</p>
-<pre><code>{{ emailUrlFor <span class="hljs-string">'myRoute'</span> param=<span class="hljs-string">'foo'</span> }}<span class="hljs-function"> =&gt;</span> <span class="hljs-attribute">http</span>:<span class="hljs-regexp">//</span>root-domain.com/my-route/foo
+<pre><code>{{ emailUrlFor <span class="hljs-string">'myRoute'</span> param=<span class="hljs-string">'foo'</span> }} =&gt; <span class="hljs-attribute">http</span>:<span class="hljs-regexp">//</span>root-domain.com/my-route/foo
 </code></pre>
             </div>
             
@@ -645,7 +647,7 @@ provided <code>route</code> prop from the template.</p>
       Router.route <span class="hljs-string">"preview<span class="hljs-subst">#{template.name}</span>Email"</span>,
         <span class="hljs-attribute">path</span>: path
         <span class="hljs-attribute">where</span>: <span class="hljs-string">'server'</span>
-        <span class="hljs-attribute">action</span>:<span class="hljs-function"> -&gt;</span>
+        <span class="hljs-attribute">action</span>: <span class="hljs-function">-&gt;</span>
 
           <span class="hljs-keyword">try</span>
             data = template.route.data <span class="hljs-keyword">and</span> template.route.data.apply(<span class="hljs-keyword">this</span>, arguments)
@@ -710,7 +712,7 @@ the browser.</p>
       Router.route <span class="hljs-string">"send<span class="hljs-subst">#{template.name}</span>Email"</span>,
         <span class="hljs-attribute">path</span>: path
         <span class="hljs-attribute">where</span>: <span class="hljs-string">'server'</span>
-        <span class="hljs-attribute">action</span>:<span class="hljs-function"> -&gt;</span></pre></div></div>
+        <span class="hljs-attribute">action</span>: <span class="hljs-function">-&gt;</span></pre></div></div>
             
         </li>
         
@@ -848,7 +850,7 @@ function body of ‘MailerClass’.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>Mailer.i<span class="hljs-function"><span class="hljs-title">nit</span> = <span class="hljs-params">(opts)</span> -&gt;</span>
+            <div class="content"><div class='highlight'><pre>Mailer.init = <span class="hljs-function"><span class="hljs-params">(opts)</span> -&gt;</span>
   mailer = MailerClass(opts)
 
   _.extend(<span class="hljs-keyword">this</span>, mailer)</pre></div></div>
