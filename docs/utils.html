@@ -16,18 +16,20 @@
           <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
           <a class="small" href="javascript:void(0);">+</a>
           <div id="jump_wrapper">
-          <div id="jump_page">
-            
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
               
-              <a class="source" href="emails.html">
-                emails.coffee
-              </a>
-            
+                
+                <a class="source" href="emails.html">
+                  emails.coffee
+                </a>
               
-              <a class="source" href="utils.html">
-                utils.coffee
-              </a>
-            
+                
+                <a class="source" href="utils.html">
+                  utils.coffee
+                </a>
+              
+            </div>
           </div>
         </li>
       </ul>
@@ -127,7 +129,7 @@ fallback if not.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="hljs-attribute">setupLogger</span>: <span class="hljs-function"><span class="hljs-params">(logger)</span> -&gt;</span>
-    res = [<span class="hljs-string">'info'</span>, <span class="hljs-string">'warn'</span>, <span class="hljs-string">'error'</span>].map <span class="hljs-function"><span class="hljs-params">(method)</span> -&gt;</span>
+    res = [<span class="hljs-string">'info'</span>, <span class="hljs-string">'warn'</span>, <span class="hljs-string">'error'</span>].map (method) -&gt;
       <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> method <span class="hljs-keyword">in</span> logger
         <span class="hljs-built_in">console</span>.warn <span class="hljs-string">"The injected logger does not support the <span class="hljs-subst">#{method}</span> method."</span>
         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
